@@ -5,43 +5,48 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background: url('images/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
+    padding: 0;
     margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Sans Pro', sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 0.075em;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 1rem;
 }
 
-/* Header Styling */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Basic Layout */
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
 #header {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
 #header .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     color: white;
-    font-weight: bold;
 }
 
-/* Navigation Styling */
 #nav {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: #222;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -60,7 +65,10 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
+    text-transform: uppercase;
     padding: 10px 20px;
+    display: block;
+    min-width: 150px;
     text-align: center;
 }
 
@@ -69,17 +77,14 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #444;
 }
 
-/* Map Container Styling */
-#map {
-    height: 400px;
-    width: 80%;
-    margin: 20px auto;
+#nav ul li a:active {
+    background-color: #666;
 }
 
 /* Main Content Styling */
 #main {
     padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+    background-color: #fff;
 }
 
 section.post {
@@ -99,6 +104,26 @@ section.post p {
     font-size: 1rem;
     line-height: 1.8;
     color: #555;
+}
+
+/* Featured post */
+.post.featured {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.post.featured .image {
+    margin-top: 20px;
+}
+
+.post.featured h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post.featured h2 a:hover {
+    text-decoration: underline;
 }
 
 /* Footer Styling */
@@ -171,15 +196,54 @@ form .actions input:hover {
     color: #ccc;
 }
 
-/* Fix Leaflet Map Container */
-#map, .leaflet-container {
-    width: 100% !important;
-    height: 400px !important;
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nav ul li {
+        margin: 10px;
+    }
+
+    #nav ul li a {
+        font-size: 1rem;
+        padding: 10px;
+        min-width: 130px;
+    }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 980px) {
-    #map {
-        width: 100%;
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #nav ul li a {
+        font-size: 0.9rem;
+        min-width: 120px;
+    }
+
+    section.post {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    #nav ul li a {
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+
+    section.post h1 {
+        font-size: 1.5rem;
+    }
+
+    section.post h2 {
+        font-size: 1.2rem;
     }
 }
