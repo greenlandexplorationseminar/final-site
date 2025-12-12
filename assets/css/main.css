@@ -81,6 +81,13 @@ p {
     background-color: #666;
 }
 
+/* Map Container Styling */
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
 /* Main Content Styling */
 #main {
     padding: 40px 20px;
@@ -104,26 +111,6 @@ section.post p {
     font-size: 1rem;
     line-height: 1.8;
     color: #555;
-}
-
-/* Featured post */
-.post.featured {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 5px;
-}
-
-.post.featured .image {
-    margin-top: 20px;
-}
-
-.post.featured h2 a {
-    color: #333;
-    text-decoration: none;
-}
-
-.post.featured h2 a:hover {
-    text-decoration: underline;
 }
 
 /* Footer Styling */
