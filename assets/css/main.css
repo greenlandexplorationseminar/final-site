@@ -1,54 +1,46 @@
-/* Reset some default styles for consistency */
-* {
+/* Basic Reset and Universal Styles */
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background: url('images/bg.jpg') no-repeat center center fixed; /* Background image */
+    background: url('images/bg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     line-height: 1.6;
-    padding: 0;
     margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Sans Pro', sans-serif;
-    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.075em;
 }
 
-p {
-    margin-bottom: 1rem;
-}
-
-/* Basic Layout */
-#wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#header {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-#header .logo {
-    font-size: 3rem;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+#intro h1 {
+    font-size: 4rem;
 }
 
 #nav {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: white;
-    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
 }
 
@@ -67,10 +59,7 @@ p {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
-    text-transform: uppercase;
     padding: 10px 20px;
-    display: block;
-    min-width: 150px;
     text-align: center;
 }
 
@@ -79,160 +68,22 @@ p {
     background-color: #444;
 }
 
-#nav ul li a:active {
-    background-color: #666;
-}
-
-/* Map Container Styling */
 #map {
     height: 400px;
     width: 80%;
     margin: 20px auto;
 }
 
-/* Main Content Styling */
-#main {
-    padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
-}
-
-section.post {
-    margin-bottom: 30px;
-}
-
-section.post h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-section.post h2 {
-    font-size: 1.5rem;
-}
-
-section.post p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-/* Footer Styling */
-#footer {
-    background-color: #222;
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 40px 20px;
     text-align: center;
 }
 
-#footer a {
-    color: white;
-    text-decoration: none;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-}
-
-/* Form Styling */
-form .fields {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-form .fields .field {
-    width: 48%;
-    margin-bottom: 15px;
-}
-
-form .field input,
-form .field textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form .actions {
-    text-align: center;
-}
-
-form .actions input {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-form .actions input:hover {
-    background-color: #444;
-}
-
-/* Social Icons */
-#footer .icons {
-    margin-top: 20px;
-}
-
-#footer .icons a {
-    margin: 0 10px;
-    font-size: 1.5rem;
-}
-
-#footer .icons a:hover {
-    color: #ccc;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    #nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #nav ul li {
-        margin: 10px;
-    }
-
-    #nav ul li a {
-        font-size: 1rem;
-        padding: 10px;
-        min-width: 130px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    #nav ul li a {
-        font-size: 0.9rem;
-        min-width: 120px;
-    }
-
-    section.post {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    #nav ul li a {
-        font-size: 0.8rem;
-        min-width: 100px;
-    }
-
-    section.post h1 {
-        font-size: 1.5rem;
-    }
-
-    section.post h2 {
-        font-size: 1.2rem;
+/* Responsive Layout */
+@media screen and (max-width: 980px) {
+    #map {
+        width: 100%;
     }
 }
