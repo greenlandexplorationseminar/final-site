@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage - Massively</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Leaflet.js CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Leaflet.js JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
+
+        <!-- Revision 1 -->
+        <div id="revision">
+            <h2>Revision 1</h2>
+        </div>
 
         <!-- Intro -->
         <div id="intro">
@@ -23,9 +24,6 @@
                 <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
         </div>
-
-        <!-- Map Section -->
-        <div id="map" style="height: 400px; width: 80%; margin: 20px auto;"></div>
 
         <!-- Header -->
         <header id="header">
@@ -87,39 +85,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- Map Script -->
-    <script>
-        // Initialize the map
-        var map = L.map('map', {
-            crs: L.CRS.EPSG3857, // Using the default projection (Mercator)
-            center: [72.0, -40.0], // Centered on Greenland
-            zoom: 4, // Starting zoom level
-            zoomControl: true // Enable the zoom controls (+ and -)
-        });
-
-        // Add the regular (streets) map layer
-        var regularLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Add the satellite map layer using a different provider
-        var satelliteLayer = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            attribution: '&copy; <a href="https://www.google.com/earth/">Google Earth</a>',
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
-
-        // Add a button to toggle between regular and satellite layers
-        var baseMaps = {
-            "Regular View": regularLayer,
-            "Satellite View": satelliteLayer
-        };
-
-        L.control.layers(baseMaps).addTo(map);
-
-        // Add zoom control (+ and - buttons) in the top-left corner
-        map.zoomControl.setPosition('topleft');
-    </script>
 
 </body>
 </html>
