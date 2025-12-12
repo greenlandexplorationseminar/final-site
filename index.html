@@ -1,20 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage - Massively</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* Ensure the navigation is responsive and adjusts to space */
+        #nav ul {
+            display: flex;
+            justify-content: space-evenly; /* Space out the items evenly */
+            flex-wrap: wrap; /* Allow items to wrap if needed */
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* Style for each navigation link */
+        #nav ul li a {
+            white-space: nowrap; /* Prevents text from wrapping to the next line */
+            padding: 15px 20px; /* Add more padding for better spacing */
+            font-size: 1rem; /* Set the font size (adjust if necessary) */
+            text-transform: uppercase; /* Capitalizes the text for uniformity */
+            min-width: 150px; /* Ensure each link has enough width to display the full name */
+            text-align: center; /* Center the text within the link */
+        }
+
+        /* Optional: Reduce font size for small screens */
+        @media (max-width: 768px) {
+            #nav ul li a {
+                font-size: 0.9rem; /* Adjust font size for smaller screens */
+                min-width: 120px; /* Adjust the min-width for smaller screens */
+            }
+        }
+
+        /* Optional: Reduce the font size further for mobile devices */
+        @media (max-width: 480px) {
+            #nav ul li a {
+                font-size: 0.8rem; /* Adjust font size even more */
+                min-width: 100px; /* Adjust the min-width for even smaller screens */
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
-
-        <!-- Revision 1 -->
-        <div id="revision">
-            <h2>Revision 1</h2>
-        </div>
 
         <!-- Intro -->
         <div id="intro">
@@ -39,16 +73,70 @@
                 <li><a href="monitoring.html">Monitoring/Alarm Systems</a></li>
                 <li><a href="ongoing.html">Ongoing Efforts</a></li>
             </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
         </nav>
 
-        <!-- Main Content -->
+        <!-- Main -->
         <div id="main">
-            <section class="post">
+
+            <!-- Featured Post -->
+            <article class="post featured">
                 <header class="major">
-                    <h1>Welcome to Our Homepage</h1>
-                    <p>Explore our work in various fields, from landslides to monitoring systems and ongoing research.</p>
+                    <span class="date">April 25, 2017</span>
+                    <h2><a href="#">And this is a<br />massive headline</a></h2>
+                    <p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor amet nullam sed etiam veroeros.</p>
                 </header>
+                <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+                <ul class="actions special">
+                    <li><a href="#" class="button large">Full Story</a></li>
+                </ul>
+            </article>
+
+            <!-- Posts -->
+            <section class="posts">
+                <article>
+                    <header>
+                        <span class="date">April 24, 2017</span>
+                        <h2><a href="#">Sed magna<br />ipsum faucibus</a></h2>
+                    </header>
+                    <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button">Full Story</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <span class="date">April 22, 2017</span>
+                        <h2><a href="#">Primis eget<br />imperdiet lorem</a></h2>
+                    </header>
+                    <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button">Full Story</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header>
+                        <span class="date">April 18, 2017</span>
+                        <h2><a href="#">Ante mattis<br />interdum dolor</a></h2>
+                    </header>
+                    <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+                    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                    <ul class="actions special">
+                        <li><a href="#" class="button">Full Story</a></li>
+                    </ul>
+                </article>
+                <!-- More Posts here... -->
             </section>
+
         </div>
 
         <!-- Footer -->
@@ -74,10 +162,35 @@
                     </ul>
                 </form>
             </section>
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>1234 Somewhere Road #87257<br />
+                    Nashville, TN 00000-0000</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(000) 000-0000</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">info@untitled.tld</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
         </footer>
 
     </div>
 
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
